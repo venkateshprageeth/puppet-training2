@@ -6,5 +6,5 @@ class root-tomcat::params {
         $config_path = '/etc/tomcat/tomcat.conf'
         $tomcat_base = '/var/lib/tomcat'
         $Xms = '100m'
-        $Xmx = '150m'
+        $Xmx = '200m'
 }
