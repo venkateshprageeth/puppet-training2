@@ -1,5 +1,5 @@
 class root-tomcat::params {
-        $pack = ['tomcat','tomcat-webapps']
+        $pack = ['tomcat','tomcat-webapps','tomcat-admin-webapps']
         $ser  = 'tomcat'
         $ser_status = 'running'
         $tomcat_cfg_loaded = '3'
