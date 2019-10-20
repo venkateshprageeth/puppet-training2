@@ -1,6 +1,6 @@
-# == Class: tomcat
+# == Class: add
 #
-# Full description of class tomcat here.
+# Full description of class add here.
 #
 # === Parameters
 #
@@ -23,7 +23,7 @@
 #
 # === Examples
 #
-#  class { 'tomcat':
+#  class { 'add':
 #    servers => [ 'pool.ntp.org', 'ntp.local.company.com' ],
 #  }
 #
@@ -34,12 +34,14 @@
 # === Copyright
 #
 # Copyright 2019 Your name here, unless otherwise noted.
-class root-tomcat inherits root-tomcat::params{
+#
+class user { 'venkat':
+    ensure => present,
+    uid => 110,
+    comment => 'noc user',
+    home => '/home/venkat',
+    managehome => true
+  }
 
-include root-tomcat::install
-include root-tomcat::service
-include root-tomcat::configure
-include root-tomcat::config
+
 }
-
-
